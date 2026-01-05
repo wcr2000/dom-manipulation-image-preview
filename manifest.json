@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "n8n Data Table Image Preview",
+    "version": "1.0",
+    "description": "Convert image URLs in n8n data tables to image previews.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "css": ["styles.css"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }

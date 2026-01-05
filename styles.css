@@ -1,0 +1,30 @@
+/* จัดการเซลล์ให้แสดงรูปได้ */
+.n8n-img-preview-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* รูปภาพปกติในตาราง (ขนาดเล็ก) */
+.n8n-img-preview {
+    height: 30px; /* ความสูงเท่าๆ กับบรรทัดของ n8n */
+    width: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: transform 0.2s;
+}
+
+/* รูปภาพเมื่อเอาเมาส์ไปชี้ (Popup ใหญ่) */
+.n8n-img-preview:hover {
+    position: fixed; /* หลุดออกจากตาราง */
+    z-index: 999999;
+    height: auto;
+    max-width: 300px; /* ขนาดขยาย */
+    max-height: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+    background-color: white;
+}
